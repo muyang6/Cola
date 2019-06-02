@@ -4,6 +4,7 @@
 	<div class="blog-header-overlay"></div>
 	<div class="header-image-block" style="background-image: url('<?php  $this->fields->img(); ?>');');"></div>
 </div>
+<div class="test"></div>
 <div class="blog-post-section section">
 	<div class="blog-post-container container w-container">
 		<div class="white-content-block">
@@ -35,4 +36,53 @@
 
 				
 			</div>
+
+
+
+<div class="leftNav-item">
+<i title="返回顶部" class="for-top">
+<i class="fa fa-arrow-up fa-4x"></i>
+
+</div>
+
 		</div>
+ <script>
+$(function() {
+    $(".leftNav-item li").hover(function(e) {
+        var alias = $(this).attr("lay-data");
+        var str = $(this).attr("data-fooc");
+        var icon = $(this).children("i").attr("class");
+        if (!alias) {
+            return false;
+        }
+        $(this).append(setlayer(alias, str, icon));
+        $(this).children("div").show(300);
+    },
+ function(e) {
+        $(this).children("div").remove();
+    });
+   
+    $(window).scroll(function() {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop >= 1000) {
+            $(".for-top").show();
+        } else {
+            $(".for-top").hide();
+        }
+    });
+    $(".for-top").click(function() {
+        console.log("Are You Ok?");
+        $('html,body').animate({
+            scrollTop: 0
+        },
+        700);
+    })
+})
+
+ </script>
+<script>
+	$('.test').headBand({
+		'background':'#50bcb6',
+		'height':"3"
+	});
+</script>

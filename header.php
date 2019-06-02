@@ -12,9 +12,19 @@
       width: 100%;
       padding: 10px;
       text-align: center;
-      background: rgba(179, 173, 173, 0.8);
+      background:#888888;
     }
+.leftNav-item {
+	position: fixed;
+	right: 1px;
+	top: 80%;
+	z-index: 999999
 
+}
+.for-top {
+	display: none
+}
+*{padding: 0px;margin: 0px}
 
 </style>
 
@@ -30,8 +40,11 @@
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
 <link rel="stylesheet" href=<?php $this->options->themeUrl('prism.css'); ?> /> 
 <link rel='stylesheet'  href=<?php $this->options->themeUrl('style.css'); ?> type='text/css' media='all' />
+<link href="//cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
 <script src="//cxcat.cn/usr/themes/cxcat/prism.js"></script>
 <link href="<?php $this->options->themeUrl('favicon.jpg'); ?>" rel="shortcut icon" type="image/x-icon"></head>
+ <body id="content">
 <div class="navbar w-nav" style="text-align: left">
 	<div class="container w-container">			
 		 <div id="topbar">
@@ -49,8 +62,11 @@
     <div class="going-down header-words fly-to-view">
     </div>
 		</div>
+
 	</div>
+
 
 </div>
 
 
+</body>
